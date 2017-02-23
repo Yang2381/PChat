@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2B8AD21E5FA8A600C70990 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B8AD11E5FA8A600C70990 /* LoginViewController.swift */; };
 		6FAB01EB5F4884C2C48D54E7 /* Pods_PChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA246CFCAAF63A0B4BFD5FE4 /* Pods_PChat.framework */; };
 		EB0BD48F1E5FA573007C3B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BD48E1E5FA573007C3B93 /* AppDelegate.swift */; };
 		EB0BD4911E5FA573007C3B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BD4901E5FA573007C3B93 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2B8AD11E5FA8A600C70990 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2CD9C17F590085785F75519 /* Pods-PChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PChat/Pods-PChat.release.xcconfig"; sourceTree = "<group>"; };
 		DA246CFCAAF63A0B4BFD5FE4 /* Pods_PChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0BD48B1E5FA573007C3B93 /* PChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 			children = (
 				EB0BD48E1E5FA573007C3B93 /* AppDelegate.swift */,
 				EB0BD4901E5FA573007C3B93 /* ViewController.swift */,
+				3F2B8AD11E5FA8A600C70990 /* LoginViewController.swift */,
 				EB0BD4921E5FA573007C3B93 /* Main.storyboard */,
 				EB0BD4951E5FA573007C3B93 /* Assets.xcassets */,
 				EB0BD4971E5FA573007C3B93 /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2B8AD21E5FA8A600C70990 /* LoginViewController.swift in Sources */,
 				EB0BD4911E5FA573007C3B93 /* ViewController.swift in Sources */,
 				EB0BD48F1E5FA573007C3B93 /* AppDelegate.swift in Sources */,
 			);
@@ -374,6 +378,7 @@
 				EB0BD49F1E5FA573007C3B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
