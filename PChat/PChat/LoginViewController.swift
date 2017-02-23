@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -34,23 +35,23 @@ class LoginViewController: UIViewController {
     
     
     func signUp() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = "myUsername"
         user.password = "myPassword"
         user.email = "email@example.com"
         // other fields can be set just like with PFObject
         user["phone"] = "415-392-0202"
-        
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool, error: NSError?) -> Void in
+        user.signUpInBackground { (succeded, error) in
             if let error = error {
-                let errorString = error.userInfo["error"] as? NSString
+                print(error.localizedDescription)
                 // Show the errorString somewhere and let the user try again.
             } else {
                 print("sign up!!")
                 // Hooray! Let them use the app now.
+                // Go to next screen
             }
         }
+        
     }
     
     
