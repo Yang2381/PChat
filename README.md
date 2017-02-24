@@ -8,7 +8,7 @@ Time spent: **4** hours spent in total
 Here's a walkthrough of implemented user stories:
 
 
-<img src='http://i.imgur.com/gcVudAU.gif' title= 'Tumblr Walkthrough' width ='' alt='Video Walkthrough'/>
+<img src='http://i.giphy.com/3o84Ud9Lxy6AyyKn96.gif' title= 'PChat Walkthrough' width ='' alt='Video Walkthrough'/>
 
 
 
