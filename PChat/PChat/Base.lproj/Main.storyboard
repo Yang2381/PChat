@@ -128,11 +128,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="Pem-Z5-TqD" customClass="textCell" customModule="PChat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="53" id="Pem-Z5-TqD" customClass="textCell" customModule="PChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pem-Z5-TqD" id="v4q-1t-yZV">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-Qz-OND">
@@ -153,7 +153,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="oPN-Jb-Cwu" id="hDQ-bg-c9m"/>
-                                            <outlet property="userName" destination="gsk-Qz-OND" id="x83-dm-0IG"/>
+                                            <outlet property="userNameLabel" destination="gsk-Qz-OND" id="8aX-5i-l3y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

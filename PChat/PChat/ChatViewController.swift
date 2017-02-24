@@ -64,7 +64,7 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
         let textMessage = messages![indexPath.row]
         let userName = textMessage["user"]
         let text = textMessage["text"]
-        cell.userName.text = userName as! String?
+        cell.userNameLabel.text = userName as! String?
         cell.textLabel?.text = text as! String?
         return cell
     }

@@ -11,8 +11,8 @@ import Parse
 
 class textCell: UITableViewCell {
 
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var userName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
