@@ -11,15 +11,21 @@ import Parse
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in}
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in }
         alertController.addAction(cancelAction)
 
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in}
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
         alertController.addAction(OKAction)
         
         present(alertController, animated: true) {
@@ -36,11 +42,11 @@ class LoginViewController: UIViewController {
     
     func signUp() {
         let user = PFUser()
-        user.username = "myUsername"
-        user.password = "myPassword"
-        user.email = "email@example.com"
+        user.username = emailTextField.text
+        user.password = passwordTextField.text
+        //user.email = emailTextField.text
         // other fields can be set just like with PFObject
-        user["phone"] = "415-392-0202"
+        //user["phone"] = "415-392-0202"
         user.signUpInBackground { (succeded, error) in
             if let error = error {
                 print(error.localizedDescription)
