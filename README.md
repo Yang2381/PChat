@@ -12,7 +12,7 @@ Here's a walkthrough of implemented user stories:
 
 
 
-GIF created with [Giphy](http://www.cockos.com/licecap/).
+GIF created with [Giphy](http://www.giphy.com).
 
 ## License
 
