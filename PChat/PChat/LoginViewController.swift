@@ -9,7 +9,14 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+extension CGRect{
+    init(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) {
+        self.init(x:x,y:y,width:width,height:height)
+    }
+    
+}
+
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,8 +24,42 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "asses.png")!)
+        self.passwordTextField.delegate=self
+        self.emailTextField.delegate=self
+        
+         
+        
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.DismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
+        //signUpButton.backgroundColor = UIColor(white:0.000, alpha:0.07)
+        let borderAlpha : CGFloat = 0.7
+        let cornerRadius : CGFloat = 5.0
+        
+        signUpButton.frame = CGRect(100, 100, 200, 40)
+        signUpButton.setTitle("Sign Up", for: UIControlState.normal)
+        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        signUpButton.backgroundColor = UIColor(white:0.000, alpha:0.07)
+        signUpButton.layer.borderWidth = 1.0
+        signUpButton.layer.borderColor = UIColor(white: 1.0, alpha: borderAlpha).cgColor
+        signUpButton.layer.cornerRadius = cornerRadius
+        
+        loginButton.frame = CGRect(100, 100, 200, 40)
+        loginButton.setTitle("Login", for: UIControlState.normal)
+        loginButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        loginButton.backgroundColor = UIColor(white:0.000, alpha:0.07)
+        loginButton.layer.borderWidth = 1.0
+        loginButton.layer.borderColor = UIColor(white: 1.0, alpha: borderAlpha).cgColor
+        loginButton.layer.cornerRadius = cornerRadius
+        
+        
+        
+        
         /*
         let alertController = UIAlertController(title: "Error", message: "Failed to signup", preferredStyle: .alert)
         
@@ -88,7 +129,6 @@ class LoginViewController: UIViewController {
     
     func signUp() {
        
-       
         let user = PFUser()
         user.username = emailTextField.text
         user.password = passwordTextField.text
@@ -116,6 +156,14 @@ class LoginViewController: UIViewController {
        
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    func DismissKeyboard(){
+        self.view.endEditing(true)
+    }
     
 
     /*
