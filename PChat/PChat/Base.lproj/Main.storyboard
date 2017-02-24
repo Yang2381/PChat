@@ -35,10 +35,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxT-8b-bWg">
-                                <rect key="frame" x="70" y="539" width="234" height="30"/>
+                                <rect key="frame" x="70" y="529" width="234" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="Fad-dY-7JH"/>
-                                    <constraint firstAttribute="height" constant="30" id="ufw-oL-a7S"/>
+                                    <constraint firstAttribute="height" constant="40" id="ufw-oL-a7S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign up"/>
@@ -63,7 +63,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-KS-T8n">
                                 <rect key="frame" x="70" y="457" width="234" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="49V-KU-p8u"/>
+                                    <constraint firstAttribute="height" constant="40" id="49V-KU-p8u"/>
                                     <constraint firstAttribute="width" constant="57" id="RGs-8r-w8I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
