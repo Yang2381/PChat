@@ -14,6 +14,7 @@
 		EB0BD4941E5FA573007C3B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0BD4921E5FA573007C3B93 /* Main.storyboard */; };
 		EB0BD4961E5FA573007C3B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0BD4951E5FA573007C3B93 /* Assets.xcassets */; };
 		EB0BD4991E5FA573007C3B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0BD4971E5FA573007C3B93 /* LaunchScreen.storyboard */; };
+		EB0C2A641E5FC8FC0025152C /* textCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0C2A631E5FC8FC0025152C /* textCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		EB0BD4951E5FA573007C3B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB0BD4981E5FA573007C3B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB0BD49A1E5FA573007C3B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB0C2A631E5FC8FC0025152C /* textCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textCell.swift; sourceTree = "<group>"; };
 		EC2D808CEF54A16981EFBF16 /* Pods-PChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PChat/Pods-PChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				EB0BD48E1E5FA573007C3B93 /* AppDelegate.swift */,
 				EB0BD4901E5FA573007C3B93 /* ChatViewController.swift */,
 				3F2B8AD11E5FA8A600C70990 /* LoginViewController.swift */,
+				EB0C2A631E5FC8FC0025152C /* textCell.swift */,
 				EB0BD4921E5FA573007C3B93 /* Main.storyboard */,
 				EB0BD4951E5FA573007C3B93 /* Assets.xcassets */,
 				EB0BD4971E5FA573007C3B93 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			files = (
 				3F2B8AD21E5FA8A600C70990 /* LoginViewController.swift in Sources */,
 				EB0BD4911E5FA573007C3B93 /* ChatViewController.swift in Sources */,
+				EB0C2A641E5FC8FC0025152C /* textCell.swift in Sources */,
 				EB0BD48F1E5FA573007C3B93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
