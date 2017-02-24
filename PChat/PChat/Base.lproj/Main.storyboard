@@ -55,6 +55,9 @@
                                     <constraint firstAttribute="width" constant="52" id="qKn-nj-c60"/>
                                 </constraints>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0b-GJ-dw8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-KS-T8n">
                                 <rect key="frame" x="266" y="347" width="38" height="30"/>
@@ -63,6 +66,9 @@
                                     <constraint firstAttribute="height" constant="30" id="XNR-Z5-JnF"/>
                                 </constraints>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="io9-Gj-zI8"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deg-Lq-ahX">
                                 <rect key="frame" x="70" y="110" width="234" height="30"/>
