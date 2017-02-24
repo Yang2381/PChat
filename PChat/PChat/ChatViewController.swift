@@ -50,6 +50,8 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
             (success: Bool, error: Error?) -> Void in
             if (success) {
                 // The object has been saved.
+                self.textLabel.text = nil
+                //self.view.window?.endEditing(true)
             } else {
                 // There was a problem, check error.description
             }
@@ -64,8 +66,8 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
         let textMessage = messages![indexPath.row]
         let userName = textMessage["user"]
         let text = textMessage["text"]
-        cell.userNameLabel.text = userName as! String?
-        cell.textLabel?.text = text as! String?
+        cell.userNameLabel.text = "\(userName!):" as String?
+        cell.messageLabel?.text = text as! String?
         return cell
     }
     
@@ -95,7 +97,7 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 for message in messages!{
                     print(message["text"])
                 }
-                // Do something with the found objects
+                //Save the fetch object to global messages
                 if let messages = messages {
                     self.messages = messages
                     

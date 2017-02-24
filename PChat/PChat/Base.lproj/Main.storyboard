@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,24 +122,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amu-lb-wtO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="amu-lb-wtO">
                                 <rect key="frame" x="16" y="87" width="241" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.89756129179999999" blue="0.86592217979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1s8-sZ-uzO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1s8-sZ-uzO">
                                 <rect key="frame" x="-7" y="159" width="382" height="508"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="53" id="Pem-Z5-TqD" customClass="textCell" customModule="PChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pem-Z5-TqD" id="v4q-1t-yZV">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-Qz-OND">
@@ -146,7 +146,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPN-Jb-Cwu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPN-Jb-Cwu">
                                                     <rect key="frame" x="113" y="16" width="242" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -156,6 +156,7 @@
                                             <constraints>
                                                 <constraint firstItem="gsk-Qz-OND" firstAttribute="baseline" secondItem="oPN-Jb-Cwu" secondAttribute="baseline" id="9ro-ye-pQe"/>
                                                 <constraint firstItem="gsk-Qz-OND" firstAttribute="leading" secondItem="v4q-1t-yZV" secondAttribute="leadingMargin" constant="7" id="KSM-WE-P4N"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oPN-Jb-Cwu" secondAttribute="trailing" constant="19" id="ah8-eH-aAf"/>
                                                 <constraint firstItem="oPN-Jb-Cwu" firstAttribute="leading" secondItem="gsk-Qz-OND" secondAttribute="trailing" constant="19" id="cnB-es-FnQ"/>
                                                 <constraint firstItem="gsk-Qz-OND" firstAttribute="centerY" secondItem="v4q-1t-yZV" secondAttribute="centerY" id="gJe-9c-Xt7"/>
                                             </constraints>
@@ -167,9 +168,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSb-Wk-l8t">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSb-Wk-l8t">
                                 <rect key="frame" x="285" y="84" width="74" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="7h9-rX-Jpj"/>
+                                </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendText:" destination="Ggl-GZ-V8T" eventType="touchUpInside" id="b8i-vc-sJZ"/>
@@ -177,6 +180,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1s8-sZ-uzO" firstAttribute="leading" secondItem="8lO-Nv-Vah" secondAttribute="leadingMargin" constant="-23" id="1rm-8x-klf"/>
+                            <constraint firstItem="amu-lb-wtO" firstAttribute="leading" secondItem="8lO-Nv-Vah" secondAttribute="leadingMargin" id="5NS-ak-flP"/>
+                            <constraint firstAttribute="trailing" secondItem="1s8-sZ-uzO" secondAttribute="trailing" id="5Q4-CF-Xal"/>
+                            <constraint firstItem="amu-lb-wtO" firstAttribute="top" secondItem="xjy-g5-TOt" secondAttribute="bottom" constant="23" id="A5Z-8U-faf"/>
+                            <constraint firstItem="CSb-Wk-l8t" firstAttribute="leading" secondItem="amu-lb-wtO" secondAttribute="trailing" constant="28" id="JBy-oF-Icv"/>
+                            <constraint firstItem="1s8-sZ-uzO" firstAttribute="bottom" secondItem="8Fc-hL-t85" secondAttribute="top" id="Kyd-GC-fKE"/>
+                            <constraint firstItem="CSb-Wk-l8t" firstAttribute="trailing" secondItem="8lO-Nv-Vah" secondAttribute="trailingMargin" id="Ndh-Zm-M8C"/>
+                            <constraint firstItem="amu-lb-wtO" firstAttribute="baseline" secondItem="CSb-Wk-l8t" secondAttribute="baseline" id="WDW-Du-E1B"/>
+                            <constraint firstItem="1s8-sZ-uzO" firstAttribute="top" secondItem="CSb-Wk-l8t" secondAttribute="bottom" constant="41" id="uIH-es-kOy"/>
+                            <constraint firstItem="amu-lb-wtO" firstAttribute="baseline" secondItem="CSb-Wk-l8t" secondAttribute="firstBaseline" id="uZo-Fi-zZ9"/>
+                            <constraint firstItem="CSb-Wk-l8t" firstAttribute="top" secondItem="xjy-g5-TOt" secondAttribute="bottom" constant="20" id="ubD-s6-Z2Y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="0kk-fA-P5I"/>
                     <connections>
