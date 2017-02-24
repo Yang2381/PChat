@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
