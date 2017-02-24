@@ -42,7 +42,7 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
      By calling the method saveInBackground
     *************************************************/
     @IBAction func sendText(_ sender: Any) {
-        let message = PFObject(className:"Message")
+        let message = PFObject(className:"Message1234")
         
         message["user"] = PFUser.current()?.username
         message["text"] = textLabel.text
@@ -85,7 +85,7 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
      It is then set it as the global array messages
     *******************************************************************************/
     func onTimer() {
-        let query = PFQuery(className:"Message")
+        let query = PFQuery(className:"Message1234")
         query.addDescendingOrder("createdAt")
         query.findObjectsInBackground {
             (messages: [PFObject]?, error: Error?) -> Void in
@@ -99,13 +99,14 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 if let messages = messages {
                     self.messages = messages
                     
-                    self.tableView.reloadData()
+                    
                 }
             } else {
                 // Log details of the failure
                 print(error)
             }
         }
+        self.tableView.reloadData()
     }
 
 }
